@@ -44,3 +44,7 @@ An all-round developer toolset.
    - --help, -h               show help (default: false)
    - --init-completion value  generate completion code. Value must be 'bash' or 'zsh'
    - --version, -v            print the version (default: false)
+
+
+## INSTALLATION
+- macOS `brew tap mrhunterzhao/devtool && brew install devtool`
