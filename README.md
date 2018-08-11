@@ -47,4 +47,4 @@ An all-round developer toolset.
 
 
 ## INSTALLATION
-- macOS `brew tap mrhunterzhao/devtool && brew install devtool`
+- macOS `brew tap hzio/devtool && brew install devtool`
