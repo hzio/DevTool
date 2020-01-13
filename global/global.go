@@ -1,6 +1,6 @@
 package global
 
-import "gopkg.in/urfave/cli.v2"
+import "github.com/urfave/cli/v2"
 
 // ===========================================================
 //
@@ -16,13 +16,12 @@ const (
 	CategoryServer   = "SERVER"
 	CategoryEncode   = "ENCODE"
 
-
 	Source = "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ!@#$%^&*()_+<>?[]"
 )
 
 // ===========================================================
 //
-//       Cross-platform commands definitions
+//       Cross-platform command definitions
 //
 // ===========================================================
 var (

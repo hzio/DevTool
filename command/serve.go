@@ -1,17 +1,17 @@
 package command
 
 import (
+	"DevTool/global"
+	"DevTool/tool"
 	"fmt"
-	"global"
-	"gopkg.in/urfave/cli.v2"
+	"github.com/urfave/cli/v2"
 	"net/http"
 	"time"
-	"tool"
 )
 
 // ===========================================================
 //
-//       Operation commands declarations
+//       Operation command declarations
 //
 // ===========================================================
 var (
@@ -31,7 +31,7 @@ var (
 
 // ===========================================================
 //
-//       Operation commands implementations
+//       Operation command implementations
 //
 // ===========================================================
 func execStaticServerServeCommand(ctx *cli.Context) error {

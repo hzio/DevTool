@@ -1,15 +1,15 @@
 package command
 
 import (
-	"gopkg.in/urfave/cli.v2"
+	"github.com/urfave/cli/v2"
 
-	"global"
-	"tool"
+	"DevTool/global"
+	"DevTool/tool"
 )
 
 // ===========================================================
 //
-//       Operation commands declarations
+//       Operation command declarations
 //
 // ===========================================================
 var (
@@ -61,7 +61,7 @@ var (
 
 // ===========================================================
 //
-//       Operation commands implementations
+//       Operation command implementations
 //
 // ===========================================================
 func execBaiduSearchCommand(ctx *cli.Context) error {

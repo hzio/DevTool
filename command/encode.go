@@ -1,15 +1,15 @@
 package command
 
 import (
+	"DevTool/global"
 	"fmt"
-	"global"
-	"gopkg.in/urfave/cli.v2"
+	"github.com/urfave/cli/v2"
 	"net/url"
 )
 
 // ===========================================================
 //
-//       Operation commands declarations
+//       Operation command declarations
 //
 // ===========================================================
 var (
@@ -32,7 +32,7 @@ var (
 
 // ===========================================================
 //
-//       Operation commands implementations
+//       Operation command implementations
 //
 // ===========================================================
 func execUrlEncodeTranscodeCommand(ctx *cli.Context) error {

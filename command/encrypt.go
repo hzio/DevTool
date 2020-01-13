@@ -1,22 +1,22 @@
 package command
 
 import (
+	"DevTool/global"
+	"DevTool/tool"
 	"crypto/md5"
 	"encoding/base64"
 	"encoding/hex"
 	"fmt"
-	"global"
-	"gopkg.in/urfave/cli.v2"
+	"github.com/urfave/cli/v2"
 	"io/ioutil"
 	"log"
 	"math"
 	"os"
-	"tool"
 )
 
 // ===========================================================
 //
-//       Operation commands declarations
+//       Operation command declarations
 //
 // ===========================================================
 var (
@@ -46,7 +46,7 @@ var (
 
 // ===========================================================
 //
-//       Operation commands implementations
+//       Operation command implementations
 //
 // ===========================================================
 func execBase64EncryptionCommand(ctx *cli.Context) error {
