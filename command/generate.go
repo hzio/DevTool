@@ -1,20 +1,19 @@
 package command
 
 import (
+	"DevTool/global"
+	"DevTool/tool"
 	"crypto/md5"
 	"encoding/hex"
 	"fmt"
-	"gopkg.in/urfave/cli.v2"
-
-	"global"
+	"github.com/urfave/cli/v2"
 	"strconv"
 	"time"
-	"tool"
 )
 
 // ===========================================================
 //
-//       Operation commands declarations
+//       Operation command declarations
 //
 // ===========================================================
 var (
@@ -53,7 +52,7 @@ var (
 		Usage:       "Generate a random password of 16 bits",
 		Description: "Generate a random password of 16 bits",
 		Category:    global.CategoryGenerate,
-		Action: execPasswordGenerateCommand,
+		Action:      execPasswordGenerateCommand,
 	}
 
 	UuidGenerateCommand = &cli.Command{
@@ -67,7 +66,7 @@ var (
 
 // ===========================================================
 //
-//       Operation commands implementations
+//       Operation command implementations
 //
 // ===========================================================
 
@@ -109,7 +108,6 @@ func execPasswordGenerateCommand(ctx *cli.Context) error {
 	fmt.Println(tool.GenRandomString(finalLen))
 	return nil
 }
-
 
 func execUuidGenerateCommand(ctx *cli.Context) error {
 

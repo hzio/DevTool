@@ -1,10 +1,10 @@
 package launcher
 
 import (
-	cmds "command"
+	"DevTool/command"
+	"DevTool/global"
 	"fmt"
-	"global"
-	"gopkg.in/urfave/cli.v2"
+	"github.com/urfave/cli/v2"
 	"os"
 	"time"
 )
@@ -16,12 +16,12 @@ import (
 // ===========================================================
 var (
 	app = &cli.App{
-		Name:                  "DevTool",
-		Version:               "1.0",
-		Compiled:              time.Now(),
-		Usage:                 "An all-round developer toolset.",
-		Description:           "The toolset includes encryption, encoding, formatting, generation, searching, etc...",
-		EnableShellCompletion: true,
+		Name:                 "DevTool",
+		Version:              "1.0",
+		Compiled:             time.Now(),
+		Usage:                "An all-round developer toolset.",
+		Description:          "The toolset includes encryption, encoding, formatting, generation, searching, etc...",
+		EnableBashCompletion: true,
 		Authors: []*cli.Author{
 			{
 				Name:  "Hunter Zhao",
@@ -38,7 +38,7 @@ var (
 // ===========================================================
 func Launch() {
 	if err := app.Run(os.Args); err != nil {
-		fmt.Fprintln(os.Stderr, err)
+		_, _ = fmt.Fprintln(os.Stderr, err)
 		os.Exit(1)
 	}
 }
@@ -56,50 +56,50 @@ func init() {
 
 	app.Commands = []*cli.Command{
 		// ===============================
-		// encrypt operation commands
+		// encrypt operation command
 		// ===============================
-		cmds.Base64EncryptionCommand,
-		cmds.Md5EncryptionCommand,
+		command.Base64EncryptionCommand,
+		command.Md5EncryptionCommand,
 
 		// ===============================
-		// Transcode operation commands
+		// Transcode operation command
 		// ===============================
-		cmds.UrlEncodeTranscodeCommand,
-		cmds.UrlDecodeTranscodeCommand,
+		command.UrlEncodeTranscodeCommand,
+		command.UrlDecodeTranscodeCommand,
 
 		// ===============================
-		// Generate operation commands
+		// Generate operation command
 		// ===============================
-		cmds.TimeGenerateCommand,
-		cmds.DateGenerateCommand,
-		cmds.TimestampGenerateCommand,
-		cmds.PasswordGenerateCommand,
-		cmds.UuidGenerateCommand,
+		command.TimeGenerateCommand,
+		command.DateGenerateCommand,
+		command.TimestampGenerateCommand,
+		command.PasswordGenerateCommand,
+		command.UuidGenerateCommand,
 
 		// ===============================
-		// Format operation commands
+		// Format operation command
 		// ===============================
-		cmds.TimeFormatCommand,
-		cmds.JSONFormatCommand,
+		command.TimeFormatCommand,
+		command.JSONFormatCommand,
 
 		// ===============================
-		// Search operation commands
+		// Search operation command
 		// ===============================
-		cmds.BaiduSearchCommand,
-		cmds.GoogleSearchCommand,
-		cmds.BaiduMapSearchCommand,
-		cmds.GoogleMapSearchCommand,
-		cmds.WikipediaSearchCommand,
+		command.BaiduSearchCommand,
+		command.GoogleSearchCommand,
+		command.BaiduMapSearchCommand,
+		command.GoogleMapSearchCommand,
+		command.WikipediaSearchCommand,
 
 		// ===============================
-		// Fetch operation commands
+		// Fetch operation command
 		// ===============================
-		cmds.IpFetchCommand,
+		command.IpFetchCommand,
 
 		// ===============================
-		// Server operation commands
+		// Server operation command
 		// ===============================
-		cmds.StaticServerServeCommand,
+		command.StaticServerServeCommand,
 	}
 
 }

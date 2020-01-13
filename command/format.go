@@ -1,17 +1,17 @@
 package command
 
 import (
+	"DevTool/global"
 	"encoding/json"
 	"fmt"
-	"global"
-	"gopkg.in/urfave/cli.v2"
+	"github.com/urfave/cli/v2"
 	"strconv"
 	"time"
 )
 
 // ===========================================================
 //
-//       Operation commands declarations
+//       Operation command declarations
 //
 // ===========================================================
 var (
@@ -39,7 +39,7 @@ var (
 
 // ===========================================================
 //
-//       Operation commands implementations
+//       Operation command implementations
 //
 // ===========================================================
 

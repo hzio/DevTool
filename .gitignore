@@ -1,6 +1,7 @@
 bin/
 pkg/
 build/
+vendor/
 .idea/
 .iml
 .DS_Store

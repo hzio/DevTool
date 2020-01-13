@@ -1,12 +1,12 @@
 package tool
 
 import (
+	"DevTool/global"
 	"fmt"
-	"global"
+	"math/rand"
 	"os"
 	"os/exec"
 	"runtime"
-	"math/rand"
 	"time"
 )
 
